@@ -23,8 +23,6 @@ function Dashboard() {
       localStorage.removeItem('token');
       navigate('/');
     });
-
-    // Dummy username (you can fetch actual user data if needed)
     const user = JSON.parse(localStorage.getItem('user'));
     setUsername(user?.username || 'User');
   }, [navigate]);
@@ -71,7 +69,9 @@ function Dashboard() {
     <>
   <div className="dashboard-header">
   <div className="brand-title">
-  <FaClipboardList className='brand-icon' />
+  <span className="title-icon">
+        <FaClipboardList size={30}  style={{ color: '#812f6a', position: 'relative', top: '-4px', marginRight: '10px'     }}/>
+    </span>
   Task Manager</div>
   <div className="header-actions">
   <button className="logout-btn-header" onClick={handleLogout}>Logout</button>

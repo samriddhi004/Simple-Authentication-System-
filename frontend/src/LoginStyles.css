@@ -22,16 +22,22 @@ body {
   /* letter-spacing: 0.25px; */
   margin-bottom: 35px;
 }
-
+.title-icon {
+  margin-top: 15px; /* 🔥 shift icon slightly down */
+  color: #812f6a;
+}
 .login-card {
-  background: #fff1f7; /* Soft Rose */
+  background: #fff; /* Soft Rose */
+  box-sizing: border-box;
   padding: 2rem;
   width: 100%;
   max-width: 420px;
   border-radius: 12px;
+  /* background-color: lightblue; */
   backdrop-filter: blur(6px);
-  background-color: rgba(255, 255, 255, 0.6); /* translucent white */
+  /* background-color: rgba(255, 255, 255, 0.6); translucent white */
   box-shadow: 0px 15px 30px rgba(255, 105, 180, 0.1); /* Subtle Hot Pink shadow */
+  /* border: 2px dashed blue; */
 }
 
 .login-card form {
@@ -41,6 +47,7 @@ body {
 }
 
 .login-card input {
+  margin: 0 auto;
   width: 93%;
   padding: 12px;
   border: 1px solid #eecce1; /* Pale Mauve */
@@ -58,7 +65,8 @@ body {
 .login-card button {
   width: 100%;
   padding: 12px;
-  background-color: #e0488f; /* Hot Pink */
+  background-color: #812f6a;
+  /* background-color: #e0488f; Hot Pink */
   color: white;
   border: none;
   border-radius: 6px;
@@ -69,7 +77,7 @@ body {
 }
 
 .login-card button:hover {
-  background-color:#ff69b4; /* Rose Red */
+  background-color: #e0488f; /* Rose Red */
 }
 
 .login-card .signup {
@@ -92,7 +100,7 @@ body {
   font-size: 32px;
   font-weight: 300;
   margin-bottom: 30px;
-  color:#812f6a; /*#4a154b; /* Deep Plum */
+  color:#812f6a; 
   letter-spacing: 0.25px;
   margin-bottom: 25px;
 }
@@ -109,13 +117,19 @@ textarea {
   border: 1.5px solid #d63384; /* Orchid */
   outline: none;
 }
+
 .task-list {
   list-style: none;
   padding: 0;
+  /* background-color: lightgreen; */
   margin-top: 30px;
   width: 100%;
   max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
 }
+
 
 .task-card {
   background-color: #fff; /* White card for contrast */
@@ -127,26 +141,17 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+  /* border: 2px dashed red; */
 }
 
 
-.task-card {
-  background-color: #fff; /* White card for contrast */
-  border-left: 5px solid #ff69b4; /* Pink highlight stripe */
-  padding: 1rem;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-
-.logout-btn {
+/* .logout-btn {
   margin-top: 40px;
   padding: 10px 20px;
-  background-color: #d63384;
+  background-color: #812f6a;;
   color: white;
   border: none;
   border-radius: 6px;
@@ -156,7 +161,7 @@ textarea {
 
 .logout-btn:hover {
   background-color: #b31f6a;
-}
+} */
 
 .delete-btn {
   background-color: #fce0ec;
@@ -195,7 +200,7 @@ textarea {
 }
 
 .logout-btn-header {
-  background-color: #ff69b4;
+  background-color: #812f6a;
   border: none;
   padding: 10px 20px;
   border-radius: 6px;
@@ -217,6 +222,7 @@ textarea {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0 1rem;
 }
 .brand-title {
   display: flex;

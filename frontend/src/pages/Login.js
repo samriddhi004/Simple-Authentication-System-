@@ -1,9 +1,8 @@
 import React,{useState} from "react";
 import axios from "axios";
 import { useNavigate, Link } from "react-router-dom";
-// import Layout from '../components/Layout';
-// import '../styles.css';
 import '../LoginStyles.css';
+import { FaClipboardList } from 'react-icons/fa';
 
 function Login () {
     const [form, setForm] = useState({email: '', password: ''});
@@ -35,7 +34,10 @@ localStorage.setItem('user', JSON.stringify(res.data.user));
     };
     return (
       <div className="login-container">
-      <div className="login-title">TASK MANAGER</div>
+      <div className="login-title">
+      <span className="title-icon">
+        <FaClipboardList size={60}  style={{ color: '#812f6a', position: 'relative', top: '7px', marginRight: '10px'     }}/>
+    </span>TASK MANAGER</div>
       <div className="login-card">
         <form onSubmit={handleSubmit}>
           <input

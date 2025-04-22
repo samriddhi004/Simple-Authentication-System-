@@ -24,7 +24,9 @@ function Register() {
   return (
     <div className="login-container">
       <div className="login-title"> 
-      <FaClipboardList size={60} style={{  color: '#ff69b4', paddingTop:'2px', marginRight: '6px' }} />
+      <span className="title-icon">
+        <FaClipboardList size={60}  style={{ color: '#812f6a', position: 'relative', top: '7px', marginRight: '10px'     }}/>
+    </span>
         Welcome to Task Manager!!</div>
       <div className="login-subtitle">Create Your Account</div>
       <div className="login-card">
