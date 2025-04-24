@@ -17,7 +17,7 @@ function Login () {
         try{
             const res = await axios.post('http://localhost:5000/login', form);
 
-            // 🪵 Check the response
+            //  Check the response
 console.log('Logged in user:', res.data.user);
 
 localStorage.setItem('token', res.data.token);
@@ -25,7 +25,7 @@ localStorage.setItem('user', JSON.stringify(res.data.user));
 
             localStorage.setItem('token', res.data.token);
             localStorage.setItem('user', JSON.stringify(res.data.user));
-            alert(res.data.message);
+            // alert(res.data.message);
             navigate('/dashboard');
         
         } catch(err){

@@ -1,4 +1,4 @@
-/* === Base Styles === */
+/* == Base Styles ==*/
 body {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@ body {
   background-color: #fdeef4;
 }
 
-/* === Header === */
+/* == Header == */
 .dashboard-header {
   position: fixed;
   top: 0;
@@ -192,9 +192,9 @@ body {
   background-color: #ffd9ea;
 }
 
-/* === Icon Adjustments === */
+/* == Icon Adjustments == */
 .title-icon {
   position: relative;
-  top: 5px; /* gently lift icon to align with text */
+  top: 5px; 
   color: #812f6a;
 }
