@@ -1,188 +1,13 @@
+/* === Base Styles === */
 body {
   margin: 0;
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top left, #fff1f7 0%, #fdeef4 100%);
-  /* background: linear-gradient(135deg, #fdeef4, #fff1f7); */
-  background-color: #fdeef4; /* Blush Pink */
+  background-color: #fdeef4;
 }
 
-.login-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 20px;
-}
-
-.login-title {
-  font-size: 52px;
-  font-weight: 800;
-  margin-bottom: 30px;
-  color:#812f6a; /*#4a154b; /* Deep Plum */
-  /* letter-spacing: 0.25px; */
-  margin-bottom: 35px;
-}
-.title-icon {
-  margin-top: 15px; /* 🔥 shift icon slightly down */
-  color: #812f6a;
-}
-.login-card {
-  background: #fff; /* Soft Rose */
-  box-sizing: border-box;
-  padding: 2rem;
-  width: 100%;
-  max-width: 420px;
-  border-radius: 12px;
-  /* background-color: lightblue; */
-  backdrop-filter: blur(6px);
-  /* background-color: rgba(255, 255, 255, 0.6); translucent white */
-  box-shadow: 0px 15px 30px rgba(255, 105, 180, 0.1); /* Subtle Hot Pink shadow */
-  /* border: 2px dashed blue; */
-}
-
-.login-card form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-.login-card input {
-  margin: 0 auto;
-  width: 93%;
-  padding: 12px;
-  border: 1px solid #eecce1; /* Pale Mauve */
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #fff9fb;
-  transition: border 0.2s;
-}
-
-.login-card input:focus {
-  border: 1.5px solid #d63384; /* Orchid */
-  outline: none;
-}
-
-.login-card button {
-  width: 100%;
-  padding: 12px;
-  background-color: #812f6a;
-  /* background-color: #e0488f; Hot Pink */
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s ease-in-out;
-}
-
-.login-card button:hover {
-  background-color: #e0488f; /* Rose Red */
-}
-
-.login-card .signup {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 0.95rem;
-}
-
-.login-card .signup a {
-  color: #d63384; /* Orchid */
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.login-card .signup a:hover {
-  text-decoration: underline;
-}
-
-.login-subtitle {
-  font-size: 32px;
-  font-weight: 300;
-  margin-bottom: 30px;
-  color:#812f6a; 
-  letter-spacing: 0.25px;
-  margin-bottom: 25px;
-}
-
-textarea {
-  padding: 12px;
-  font-family: 'Poppins', sans-serif;
-  border: 1px solid #eecce1;
-  border-radius: 6px;
-  background-color: #fff9fb;
-  font-size: 1rem;
-}
-.login-card textarea:focus {
-  border: 1.5px solid #d63384; /* Orchid */
-  outline: none;
-}
-
-.task-list {
-  list-style: none;
-  padding: 0;
-  /* background-color: lightgreen; */
-  margin-top: 30px;
-  width: 100%;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  box-sizing: border-box;
-}
-
-
-.task-card {
-  background-color: #fff; /* White card for contrast */
-  border-left: 5px solid #ff69b4; /* Pink highlight stripe */
-  padding: 1rem;
-  margin-bottom: 15px;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  max-width: 420px;
-  box-sizing: border-box;
-  /* border: 2px dashed red; */
-}
-
-
-/* .logout-btn {
-  margin-top: 40px;
-  padding: 10px 20px;
-  background-color: #812f6a;;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.logout-btn:hover {
-  background-color: #b31f6a;
-} */
-
-.delete-btn {
-  background-color: #fce0ec;
-  color: #d63384;
-  border: none;
-  padding: 8px 12px;
-  border-radius: 5px;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.delete-btn:hover {
-  background-color: #ffd9ea;
-}
-
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
+/* === Header === */
 .dashboard-header {
   position: fixed;
   top: 0;
@@ -193,10 +18,24 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px; /* space from both sides */
+  padding: 0 30px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   z-index: 1000;
   box-sizing: border-box;
+}
+
+.brand-title {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a154b;
+}
+
+.brand-icon {
+  color: #ff69b4;
+  font-size: 24px;
+  margin-right: 8px;
 }
 
 .logout-btn-header {
@@ -217,23 +56,145 @@ textarea {
   background-color: #e0488f;
 }
 
+/* === Container === */
 .login-container {
-  margin-top: 90px; /* Avoid overlap with fixed header */
+  margin-top: 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 0 1rem;
 }
-.brand-title {
-  display: flex;
-  align-items: center; /* 🔥 vertical alignment */
-  font-size: 20px;
-  font-weight: 600;
-  color: #4a154b;
+
+/* === Titles === */
+.login-title {
+  font-size: 52px;
+  font-weight: 800;
+  margin-bottom: 35px;
+  color: #812f6a;
 }
 
-.brand-icon {
-  color: #ff69b4;
-  font-size: 24px;
-  margin-right: 8px;
+.login-subtitle {
+  font-size: 32px;
+  font-weight: 300;
+  color: #812f6a;
+  letter-spacing: 0.25px;
+  margin-bottom: 25px;
+}
+
+/* === Form Card === */
+.login-card {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 2rem;
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0px 15px 30px rgba(255, 105, 180, 0.1);
+}
+
+.login-card form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-card input,
+.login-card textarea {
+  width: 93%;
+  padding: 12px;
+  font-size: 1rem;
+  font-family: 'Poppins', sans-serif;
+  border: 1px solid #eecce1;
+  border-radius: 6px;
+  background-color: #fff9fb;
+  transition: border 0.2s;
+  margin: 0 auto;
+}
+
+.login-card input:focus,
+.login-card textarea:focus {
+  border: 1.5px solid #d63384;
+  outline: none;
+}
+
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background-color: #812f6a;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.login-card button:hover {
+  background-color: #e0488f;
+}
+
+.login-card .signup {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 0.95rem;
+}
+
+.login-card .signup a {
+  color: #d63384;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-card .signup a:hover {
+  text-decoration: underline;
+}
+
+/* === Task List === */
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.task-card {
+  background-color: #fff;
+  border-left: 5px solid #ff69b4;
+  padding: 1rem;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(255, 105, 180, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
+}
+
+.delete-btn {
+  background-color: #fce0ec;
+  color: #d63384;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.delete-btn:hover {
+  background-color: #ffd9ea;
+}
+
+/* === Icon Adjustments === */
+.title-icon {
+  position: relative;
+  top: 5px; /* gently lift icon to align with text */
+  color: #812f6a;
 }
