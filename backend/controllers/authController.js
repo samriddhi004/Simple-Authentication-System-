@@ -24,7 +24,7 @@ const register = async (req, res) => {
 const login = async (req, res) => {
     const {email, password} = req.body;
     try {
-        const [users] = await db.query('SELECT * FROM users WHERE email = ?', [email]);
+        const [users] = await db.query('SELECT * FROM users WHERE email = ?',[email]);
         if (users.length === 0) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
@@ -33,7 +33,7 @@ const login = async (req, res) => {
         if (!isMatch) {
             return res.status(400).json({ message: 'Invalid email or password' });
         }
-        const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, { expiresIn: '1h' });
+        const token = jwt.sign({id: user.id }, process.env.JWT_SECRET, {expiresIn: '1h' });
         res.json({
             message: 'Login successful',
             token,
